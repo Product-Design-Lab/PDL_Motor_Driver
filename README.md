@@ -4,7 +4,7 @@
  
  ## Installation
  
- 1. Download the library from the GitHub repository: [PDL_Motor_Driver](https://github.com/Product-Design-Lab/PDL_Motor_Driver).
+ 1. Download the library from the GitHub repository: [PDL_PDL_Motor_Driver](https://github.com/Product-Design-Lab/PDL_PDL_Motor_Driver).
  2. Unzip the library and place the `MotorDriver` folder in your Arduino `libraries` directory.
  3. Restart the Arduino IDE.
  
@@ -13,7 +13,7 @@
  ### Including the Library
  
  ```cpp
- #include <motor_driver.h>
+ #include <PDL_Motor_Driver.h>
  ```
  
  ### Creating an Instance
