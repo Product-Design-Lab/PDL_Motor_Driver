@@ -1,0 +1,16 @@
+MotorDriver              KEYWORD1
+setPwmPin                KEYWORD2
+setDirPin                KEYWORD2
+setDirNoPin              KEYWORD2
+setVisenPin              KEYWORD2
+setVisenNoPin            KEYWORD2
+setEnablePin             KEYWORD2
+setEnableNoPin           KEYWORD2
+setEnable                KEYWORD2
+setMaxPwm                KEYWORD2
+runMotor                 KEYWORD2
+hasCurrentPin            KEYWORD2
+getCurrent               KEYWORD2
+setVisenSensitivity      KEYWORD2
+getCurrent_mA            KEYWORD2
+setDebug                 KEYWORD2
