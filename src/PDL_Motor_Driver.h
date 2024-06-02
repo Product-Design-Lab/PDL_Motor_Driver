@@ -6,7 +6,7 @@
 class MotorDriver
 {
 private:
-    // pins
+    // Pins
     uint8_t PWM_pin = 0;
     uint8_t PWM_pin2 = 0;
     uint8_t PWM_pin_count = 0;
@@ -24,43 +24,43 @@ private:
     uint32_t target_pwm_u32 = 0;
 
     // Direction
-    enum
+    enum Direction
     {
         BACKWARD = 0,
         FORWARD = 1
     };
-    bool direction = 0;
+    bool direction = FORWARD;
 
     // Current sensing
     int current_feedback = 0;
-    float visen_A_per_V = 0; 
+    float visen_A_per_V = 0;
 
-    // Misllaneous
-    bool is_enabled = 1;
-    bool debug_enabled = 0;
+    // Miscellaneous
+    bool is_enabled = true;
+    bool debug_enabled = false;
 
 public:
     MotorDriver();
     ~MotorDriver();
 
-    void setPwmPin(const uint8_t pin);
-    void setPwmPin(const uint8_t pin1, const uint8_t pin2);
-    void setDirPin(const uint8_t pin);
-    void setDirPin(const uint8_t pin1, const uint8_t pin2);
+    void setPwmPin(uint8_t pin);
+    void setPwmPin(uint8_t pin1, uint8_t pin2);
+    void setDirPin(uint8_t pin);
+    void setDirPin(uint8_t pin1, uint8_t pin2);
     void setDirNoPin();
-    void setVisenPin(const uint8_t pin); // current sensing pin using analog voltage
+    void setVisenPin(uint8_t pin);
     void setVisenNoPin();
-    void setEnablePin(const uint8_t pin); // or sleep pin
+    void setEnablePin(uint8_t pin);
     void setEnableNoPin();
 
     void setEnable(bool enable);
-    void setMaxPwm(const uint32_t max_pwm);
-    void runMotor(const float pwm); //-1 to 1
+    void setMaxPwm(uint32_t max_pwm);
+    void runMotor(float pwm);
 
-    bool hasCurrentPin();
-    int getCurrent();
-    void setVisenSensitivity(const float A_per_V);
-    float getCurrent_mA();
+    bool hasCurrentPin() const;
+    int getCurrent() const;
+    void setVisenSensitivity(float A_per_V);
+    float getCurrent_mA() const;
 
     void setDebug(bool enable);
 };

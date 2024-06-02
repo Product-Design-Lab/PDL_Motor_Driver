@@ -17,7 +17,7 @@ void setup()
 
 void loop()
 {
-    mp6550.runMotor(0.5);
+    mp6550.runMotor(0.6);
     for (int i = 0; i < 10; i++)
     {
         Serial.println(mp6550.getCurrent_mA());
@@ -31,7 +31,7 @@ void loop()
         delay(100);
     }
 
-    mp6550.runMotor(-0.5);
+    mp6550.runMotor(-0.6);
     for (int i = 0; i < 10; i++)
     {
         Serial.println(mp6550.getCurrent_mA());
